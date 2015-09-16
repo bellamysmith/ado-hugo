@@ -13,7 +13,7 @@
 <h2>Guests</h2>
 <div>
 {{ range $person :=.Params.guests }}
-  {{ $person }}<br />
+  {{ (index .Site.Data.guests $person).Name}}
 {{ end }}
 </div>
 
